@@ -1,0 +1,19 @@
+server:
+  port: 8080
+logging:
+  level:
+    web: debug
+
+spring:
+  main:
+    banner-mode: OFF
+
+management:
+  endpoint:
+    health:
+      enabled: true
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: health, cleanup, prometheus
